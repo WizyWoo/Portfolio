@@ -1,43 +1,97 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Kevin Hagfors - Game Developer</title>
+</head>
+<body>
+    <header>
+        <h1>Kevin Hagfors</h1>        
+        <h2>Gameplay Programmer - Game Designer</h2>
+        <div class="image-links">
+            <a href="https://github.com/WizyWoo">
+                <img src="assets/images/github-mark-white.png" alt="github-mark-white.png">
+                <p>My Github</p>
+            </a>
+            <a href="https://www.linkedin.com/in/kevin-hagfors">
+                <img src="assets/images/LI-In-Bug.png" alt="LI-In-Bug.png">
+                <p>LinkedIn</p>
+            </a>
+            <a href="https://wizardkitten.itch.io/">
+                <img src="assets/images/itchio-logo-textless-white.png" alt="">
+                <p>Itch.io</p>
+            </a>
+        </div>
+    </header>
+    
+    <section class="about-me">
+        <h3>About Me</h3>
+        <p>
+            I am a Gameplay Programmer and Game Designer with a BA in Games and Entertainment Technology. I have recently graduated and I am enthusiastic to start my professional career.
+        </p>
+    </section>
 
-<html>
-	<head>
-		<title>Kevin Hagfors</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
-				<div id="sticky">
-					<h1>Kevin Hagfors</h1>
-				</div>
-				<h2>Gameplay Programmer &bull; Game Designer</h2>
-				<nav>
-					<ul>
-						<li><p>Github</p></li>
-						<li><p>Projects</p></li>
-					</ul>
-					<ul>
-						<li><a href="https://github.com/WizyWoo">
-							<img src="assets/images/github-mark-white.png" width="100" height="100">
-						</a></li>
-						<li><a href="Projects.html">
-							<p>Click Me</p>
-						</a></li>
-					</ul>
-				</nav>
+    <section class="my-work">
+        <h3>My Work</h3>
+    </section>
 
-			</div>
+	<section class="project-header">
+		<img src="assets/images/Overworked.png" alt="Overworked">
+		<p>
+			A game where you are being overworked by a supervillain who has you building evil robots in an unsafe work environment.
+		</p>
+	</section>
+    
+    <section class="project">
+        <div class="project-description-center">
+            <h3>My Responsibilities</h3>
+            <p>For this project I worked as Team Lead, Game Designer/Level Designer and Programmer. As game designer I made several of the levels in the game, as well as designing obstacles for the levels and implementing assets into the game.</p>
+        </div>
+    </section>
+
+    <section class="project-levels">
+		<div class="project-description-center">
+			<h3>Some of the levels I designed</h3>
+        </div>
+		<div class="project-level-images">
+			<img src="assets/images/Level 03.png">
+			<img src="assets/images/Level 04.png">
 		</div>
-		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-	</body>
+		<div class="project-level-images">
+			<img src="assets/images/Level 05.png">
+			<img src="assets/images/Level 08.png">
+		</div>
+    </section>
+
+    <section class="project">
+        <div class="project-image-l">
+            <img src="assets/images/player-feedback.png">
+        </div>
+        <div class="project-description">
+			<h3>User feedback</h3>
+            <p>I also designed most of the user feedback such as, feedback to show items being constructed, feedback to show usable workstations, delivery points and sucessful deliveries</p>
+        </div>
+		<div class="project-image-r">
+			<img src="assets/images/player-feedback2.png">
+		</div>
+    </section>
+
+    <section class="project-right">
+		<div class="project-image-l">
+			<img src="assets/images/electricwire-hazard.png" alt="OverworkedRailHazard.png">
+		</div>
+		<div class="project-description">
+			<h3>Broken Electric Wire and Monorail Hazard</h3>
+            <p>These hazards were designed to add to both the background of the levels as well as serve as a timing obstacle for the player to change up their pace in the levels</p>
+        </div>
+		<div class="project-image-r">
+			<img src="assets/images/OverworkedRailHazard.png" alt="OverworkedRailHazard.png">
+		</div>
+    </section>
+
+    <!-- Repeat the above section for more projects -->
+
+</body>
 </html>
