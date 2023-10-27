@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Kevin Hagfors</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/projects.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div class="wrapper">
+			<div class="project-display">
+				<a href="AGodsDraw.html">
+					<img src="assets/images/Godsdraw.png">
+				</a>
+				<p>A God's Draw is a card game with norse mythology as the main theme.</p>
+			</div>
+			<div class="project-display">
+				<a href="Overworked.html">
+					<img src="assets/images/Overworked.png">
+				</a>
+				<p>A game where you're being overworked by a supervillain who has you building evil robots in an unsafe work environment.</p>
+			</div>
+		</div>
+		<script>
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
+</html>

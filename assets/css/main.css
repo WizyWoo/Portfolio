@@ -1,0 +1,99 @@
+body
+{
+
+    background: radial-gradient(at top left, #02000e 0%, #22412d 65%, #02000e 100%);
+    height: 200vh;
+    margin: 0;
+
+}
+
+.sticky
+{
+
+    position: sticky;
+    top: 0;
+    background-color: green;
+    border: 2px solid #4CAF50;
+
+}
+
+h1
+{
+
+    color:#35f5cf;
+    font-size: 400%;
+    position: sticky;
+    top: 0;
+    display: block;
+
+}
+
+h2
+{
+
+    color: white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+
+ul
+{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+li
+{
+
+    display:inline;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    font-size: 32px;
+    color:#35f5cf;
+
+}
+
+img
+{
+
+    display:block;
+    position:absolute;
+    left: 100px;
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+
+}
+
+@keyframes headerAnim
+{
+
+    0%
+    {
+        color: rgb(255, 0, 0);
+    }
+    25%
+    {
+        color: rgb(255, 255, 0);
+    }
+    50%
+    {
+        color: rgb(9, 255, 0);
+    }
+    75%
+    {
+        color: rgb(0, 21, 255);
+    }
+    100%
+    {
+        color: rgb(255, 0, 0);
+    }
+
+}
