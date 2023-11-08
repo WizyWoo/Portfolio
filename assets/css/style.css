@@ -14,10 +14,31 @@ body
     color: white;
 }
 
+.navbar
+{
+    display: flex;
+    justify-content: end;
+    background-color: #0e0d0d;
+    width: clamp(400px, 90%, 1400px);
+    height: 3%;
+    position: fixed;
+    top: 0;
+}
+
+.navbar button
+{
+    background-color: #736363;
+    color: white;
+    width: clamp(100px, 20%, 400px);
+    font-size: 20px;
+    border-top-right-radius: 20%;
+}
+
 header
 {
     text-align: center;
-    padding: 10px;
+    margin-top: 30px;
+    padding: 20px;
 }
 
 header h1
@@ -42,18 +63,20 @@ header p
     justify-content: center;
     align-items: center;
     margin: auto;
-    width: 50%;
+    padding: 20px;
+    width: 60%;
 }
 
 .social-links a
 {
-    width: 20%;
-    padding: 10px;
+    width: 30%;
+    padding: 2px;
 }
 
 .social-links img
 {
     max-width: 35%;
+    min-width: 40px;
     height: auto;
 }
 

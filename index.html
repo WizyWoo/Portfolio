@@ -8,7 +8,12 @@
 </head>
 <body>
     <div class="wrapper">
-        <header>
+        <div class="navbar">
+            <button id="about-me">About me</button>
+            <button id="overworked-nav">Overworked</button>
+            <button id="a-gods-draw-nav">A Gods Draw</button>
+        </div>
+        <header id="start">
             <h1>Kevin Hagfors</h1>        
             <h2>Gameplay Programmer - Game Designer</h2>
             <div class="social-links">
@@ -39,7 +44,7 @@
                 <h3>My Work</h3>
             </div>
             
-            <section class="project">
+            <section class="project" id="overworked">
                 <div class="project-header">
                     <a href="https://wizardkitten.itch.io/overworked">
                         <img src="assets/images/Overworked.png">
@@ -99,7 +104,7 @@
                 
             <hr>
                 
-            <section class="project">
+            <section class="project" id="a-gods-draw">
                 <div class="project-header">
                     <a href="https://thekingcharlie.itch.io/a-gods-draw">
                         <img src="assets/images/Godsdraw.png">
@@ -139,5 +144,6 @@
             </section>
         </section>
     </div>
+    <script src="assets/scripts/navbar.js"></script>
 </body>
 </html>
