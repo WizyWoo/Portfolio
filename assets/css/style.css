@@ -35,14 +35,6 @@ body
     border-top-right-radius: 20%;
 }
 
-@media (max-width: 850px) 
-{
-    .navbar button
-    {
-        font-size: 14px;
-    }
-}
-
 header
 {
     text-align: center;
@@ -130,8 +122,10 @@ header p
     margin-bottom: 20px;
     padding-top: 2px;
     padding-bottom: 2px;
-    width: clamp(400px, 100%, 1400px);
+    width: clamp(420px, 102%, 1440px);
     height: auto;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
     background-color: #0e0d0d;
 }
 
@@ -282,4 +276,56 @@ header p
 .project-text-center p
 {
     font-size: 20px;
+}
+
+@media (max-width: 850px) 
+{
+
+    .navbar button
+    {
+        font-size: 14px;
+    }
+
+    .project-text-center h3
+    {
+        font-size: 18px;
+    }
+
+    .project-text-center p
+    {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 650px) 
+{
+
+    .project-myWork
+    {
+        flex-direction: column;
+    }
+
+    .project-image-l
+    {
+        width: clamp(200px, 50%, 600px);
+        margin-right: 0px;
+    }
+
+    .project-image-r
+    {
+        width: clamp(200px, 50%, 600px);
+        margin-left: 0px;
+    }
+
+    .project-image-center
+    {
+        width: clamp(200px, 50%, 600px);
+    }
+
+    .project-text-center
+    {
+        width: clamp(200px, 80%, 600px);
+    }
+
 }
