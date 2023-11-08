@@ -1,180 +1,253 @@
-/* Reset default margin and padding for body */
-body {
+body
+{
     margin: 0;
     padding: 0;
+    background-color: black;
+    display: block;
 }
 
-/* Style the header with your name and job title */
-header {
-    text-align: center;
-    padding: 10px;
+.wrapper
+{
+    width: clamp(720px, 90%, 1400px);
+    margin: auto;
     background-color: #333;
     color: white;
 }
 
-/* Style the name */
-header h1 {
+header
+{
+    text-align: center;
+    padding: 10px;
+}
+
+header h1
+{
     font-size: 36px;
 }
 
-/* Style the job title */
-header h2 {
+header h2
+{
     font-size: 24px;
 }
 
-/* Style the 'Game Design' text */
-header p {
+header p
+{
     font-size: 20px;
 }
 
-.about-me{
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 1px;
-}
-
-.about-me p{
+.social-links
+{
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    text-align: center;
-    position:relative;
-    left: 30%;
-    font-size: 18px;
-    width: 40%;
-}
-
-.about-me h3{
-    color: white;
-    font-size: 24px;
-}
-
-.my-work{
-    text-align: center;
-    padding: 20px;
-    font-size: 30px;
-}
-
-.project-header {
-    display: flex;
-    flex-direction: column; /* Display elements vertically */
-    align-items: center; /* Center elements horizontally */
-    text-align: center; /* Center text within the section */
-}
-
-/* Style the image */
-.project-header img {
-    max-width: 200px;
-    height: auto;
-    margin: 10px 0; /* Add spacing above and below the image */
-}
-
-/* Style the description (p) */
-.project-header p {
-    font-size: 20px;
+    align-items: center;
+    margin: auto;
     width: 50%;
 }
 
-
-/* Style each project section */
-.project {
-    display: flex;
-    margin: 20px;
+.social-links a
+{
+    width: 20%;
     padding: 10px;
 }
 
-.project-right{
-    display: flex;
-    margin: 20px;
-    padding: 10px;
-}
-
-.project-levels{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    padding: 10px;
-}
-
-/* Style project images */
-.project-image-l img {
-    max-width: 400px;
-    max-height: 400px;
-    margin-right: 20px;
-}
-
-.project-image-r img {
-    max-width: 400px;
-    max-height: 400px;
-    margin-left: 20px;
-}
-
-.project-level-images{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.project-level-images img{
-    max-width: 500px;
-    max-height: 500px;
-    margin: 10px;
-}
-
-/* Style project descriptions */
-.project-description {
-    flex: 1;
-}
-
-/* Style project titles */
-.project-description h3 {
-    font-size: 24px;
-    margin: 0;
-}
-
-/* Style project descriptions */
-.project-description p {
-    font-size: 20px;
-}
-
-.project-description-center h3 {
-    text-align: center;
-    font-size: 24px;
-    margin: 0;
-}
-
-/* Style project descriptions */
-.project-description-center p {
-    text-align: center;
-    font-size: 20px;
-}
-
-/* Add these CSS rules for the "image-links" div to display horizontally */
-.image-links {
-    display: flex;
-    justify-content: center; /* Distribute items evenly along the horizontal axis */
-    align-items: center; /* Vertically align items in the center */
-    margin: 2px 0;
-}
-
-/* Style the links within the "image-links" div */
-.image-links a {
-    text-align: center;
-    text-decoration: none;
-    color: #333; /* Link text color */
-    width: 10%; /* Distribute the width evenly among the links */
-    padding: 10px;
-}
-
-/* Style the images within the links */
-.image-links img {
+.social-links img
+{
     max-width: 35%;
     height: auto;
 }
 
-/* Style the text above the images */
-.image-links p {
+.social-links p
+{
     color:#ddd;
     font-size: 16px;
+}
+
+.about-me
+{
+    text-align: center;
+    padding: 1px;
+}
+
+.about-me p
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    width: 60%;
+    margin: auto;
+}
+
+.about-me h3
+{
+    font-size: 24px;
+}
+
+.my-work
+{
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    background-color: #181717;
+}
+
+.section-head
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: clamp(720px, 100%, 1400px);
+    height: auto;
+    background-color: #0e0d0d;
+}
+
+.section-head h3
+{
+    font-size: 40px;
+}
+
+.project-header
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.project-header img
+{
+    max-width: clamp(300px, 30%, 600px);
+    width: auto;
+    height: auto;
+    margin: 10px 0;
+}
+
+.project-header p
+{
+    font-size: 20px;
+    width: 50%;
+}
+
+.project
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.project-myWork
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+}
+
+.project-levels
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-image-l
+{
+    display: flex;
+    width: clamp(200px, 33%, 600px);
+    height: auto;
+    margin-right: 20px;
+}
+
+.project-image-l img
+{
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.project-image-r
+{
+    display: flex;
+    width: clamp(200px, 33%, 600px);
+    height: auto;
+    margin-left: 20px;
+}
+
+.project-image-r img
+{
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.project-image-center
+{
+    display: flex;
+    width: clamp(200px, 33%, 600px);
+    height: auto;
+    margin: auto;
+}
+
+.project-image-center img
+{
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.project-level-images
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: clamp(300px, 50%, 800px);
+}
+
+.project-level-images img
+{
+    width: 100%;
+    height: auto;
+    margin: 10px;
+}
+
+.project-text
+{
+    flex: 1;
+}
+
+.project-text h3
+{
+    font-size: 24px;
+}
+
+.project-text p
+{
+    font-size: 20px;
+}
+
+.project-text-center
+{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: clamp(200px, 50%, 600px);
+    margin: auto;
+}
+
+.project-text-center h3
+{
+    font-size: 24px;
+}
+
+.project-text-center p
+{
+    font-size: 20px;
 }
