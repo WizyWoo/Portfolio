@@ -18,7 +18,7 @@ document.getElementById('a-gods-draw-nav').addEventListener('click', function() 
     });
 });
 
-document.getElementById('about-me').addEventListener('click', function() {
+document.getElementById('about-me-nav').addEventListener('click', function() {
     var targetSection = document.getElementById("start");
     var targetPosition = targetSection.getBoundingClientRect().top + window.scrollY;
 
