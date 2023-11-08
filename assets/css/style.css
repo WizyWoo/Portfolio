@@ -29,8 +29,8 @@ body
 {
     background-color: #736363;
     color: white;
-    width: clamp(100px, 20%, 400px);
-    font-size: 20px;
+    width: clamp(130px, 22%, 400px);
+    font-size: 24px;
     text-wrap: nowrap;
     border-top-right-radius: 20%;
 }
@@ -283,7 +283,7 @@ header p
 
     .navbar button
     {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .project-text-center h3
