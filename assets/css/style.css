@@ -31,7 +31,16 @@ body
     color: white;
     width: clamp(100px, 20%, 400px);
     font-size: 20px;
+    text-wrap: nowrap;
     border-top-right-radius: 20%;
+}
+
+@media (max-width: 850px) 
+{
+    .navbar button
+    {
+        font-size: 14px;
+    }
 }
 
 header
@@ -172,13 +181,6 @@ header p
     padding: 10px;
 }
 
-.project-levels
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .project-image-l
 {
     display: flex;
@@ -224,13 +226,20 @@ header p
     height: auto;
 }
 
+.project-levels
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .project-level-images
 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: clamp(300px, 50%, 800px);
+    width: clamp(150px, 50%, 800px);
 }
 
 .project-level-images img
