@@ -87,10 +87,41 @@ header p
     font-size: 16px;
 }
 
+.the-three
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills
+{
+    text-align: left;
+    width: 30%;
+}
+
+.contact-me
+{
+    text-align: center;
+    font-size: 24px;
+    padding: 1px;
+    width: 30%;
+}
+
+.contact-me button
+{
+    background-color: transparent;
+    color: white;
+    font-size: 24px;
+    width: auto;
+    border: 5px solid yellow;
+}
+
 .about-me
 {
     text-align: center;
     padding: 1px;
+    margin: auto;
+    width: 100%;
 }
 
 .about-me p
@@ -116,6 +147,15 @@ header p
     background-color: #181717;
 }
 
+.my-work-button
+{
+    background-color: transparent;
+    color: white;
+    font-size: 40px;
+    border: 5px solid yellow;
+}
+
+
 .section-head
 {
     margin-top: 20px;
@@ -138,16 +178,50 @@ header p
 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
 }
 
+.project-header a
+{
+    max-width: 300px;
+}
+
 .project-header img
 {
-    max-width: clamp(300px, 30%, 600px);
-    width: auto;
-    height: auto;
+    width: 300px;
     margin: 10px 0;
+}
+
+.img-link img
+{
+    transition: transform 0.5s;
+}
+
+.img-link img:hover
+{
+    transform: scale(1.2);
+}
+
+.hover-img-l img
+{
+    transition: transform 0.5s;
+}
+
+.hover-img-l img:hover
+{
+    transform: scale(1.8) translateX(50%);
+}
+
+.hover-img-r img
+{
+    transition: transform 0.5s;
+}
+
+.hover-img-r img:hover
+{
+    transform: scale(1.8) translateX(-50%);
 }
 
 .project-header p
@@ -188,6 +262,7 @@ header p
     max-width: 100%;
     width: auto;
     height: auto;
+    object-fit: scale-down;
 }
 
 .project-image-r
@@ -203,6 +278,7 @@ header p
     max-width: 100%;
     width: auto;
     height: auto;
+    object-fit: scale-down;
 }
 
 .project-image-center

@@ -8,15 +8,15 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="navbar">
+        <nav class="navbar">
             <button id="about-me-nav">About me</button>
             <button id="overworked-nav">Overworked</button>
             <button id="a-gods-draw-nav">A Gods Draw</button>
-        </div>
+        </nav>
         <header id="start">
-            <h1>Kevin Hagfors</h1>        
+            <h1>Kevin Hagfors</h1>
             <h2>Gameplay Programmer - Game Designer</h2>
-            <div class="social-links">
+            <div class="social-links img-link">
                 <a href="https://github.com/WizyWoo">
                     <img src="assets/images/github-mark-white.png">
                     <p>My Github</p>
@@ -31,21 +31,39 @@
                 </a>
             </div>
         </header>
-        
-        <section class="about-me">
-            <h3>About Me</h3>
-            <p>
-                I am a Gameplay Programmer and Game Designer with a BA in Games and Entertainment Technology. I have recently graduated and I am enthusiastic to start my professional career.
-            </p>
+
+        <section class="the-three">
+            <div class="skills">
+                <h4>Skills</h4>
+                <ul>
+                    <li>C#</li>
+                    <li>C++</li>
+                    <li>Unity</li>
+                    <li>Unreal Engine</li>
+                    <li>Git</li>
+                    <li>Github</li>
+                    <li>Github Copilot</li>
+                </ul>
+            </div>
+            <div class="about-me">
+                <h3>About Me</h3>
+                <p>
+                    I am a Gameplay Programmer and Game Designer with a BA in Games and Entertainment Technology. I have a passion for making games and I am always looking to learn new things and improve my skills. I work well in teams and have some experience team leading small game projects. I have recently graduated and I am enthusiastic to start my professional career.
+                </p>
+            </div>
+            <div class="contact-me">
+                <h4>Contact Me</h4>
+                <button id="copy-text">kevin.hagfors@gmail.com</button>
+            </div>
         </section>
 
         <section class="my-work">
             <div class="section-head">
-                <h3>My Work</h3>
+                <h3>My <button class="my-work-button" id="toggle-button">Programming</button> Work</h3>
             </div>
             
             <section class="project" id="overworked">
-                <div class="project-header">
+                <div class="project-header img-link">
                     <a href="https://wizardkitten.itch.io/overworked">
                         <img src="assets/images/Overworked.png">
                     </a>
@@ -53,59 +71,104 @@
                         A game where you are being overworked by a supervillain who has you building evil robots in an unsafe work environment.
                     </p>
                 </div>
-            
-                <div class="project-text-center">
-                    <h3>My Responsibilities</h3>
-                    <p>For this project I worked as Team Lead, Game Designer and Programmer. As game designer I made several of the levels in the game, as well as designing obstacles for the levels and implementing assets into the game.</p>
-                </div>
-                
-                <div class="project-myWork">
-                    <div class="project-levels">
+
+                <section class="programming">
+                    <div class="project-text-center">
+                        <h3>My Responsibilities</h3>
+                        <p>For this project I worked as Team Lead, Game Designer and Programmer. As Programmer I made the Crafting and Repair system, as well as doing the Fmod integration for our project. Other than that I did a lot of bug fixing for both mine and others code.</p>
+                    </div>
+
+                    <div class="project-myWork">
+                        <div class="project-image-l hover-img-l">
+                            <img src="assets/images/Programming/Overworked/SoundManager.png">
+                        </div>
                         <div class="project-text-center">
-                            <h3>Some of the levels I designed</h3>
+                            <h3>Fmod Integration</h3>
+                            <p>For this project I tasked myself with integrating Fmod to give our game a better soundscape. I wanted to integrate it in a way that would allow the other programmers to easily play sounds of all types through just one Method call. To do this I made a SoundManager that allows anyone to call a method passing an Fmod event reference and an enum for what type of sound it is. When the method is called the SoundManager takes care of the sound instancing and keeps references for the sounds played to lessen loading times for sounds that would be replayed later through storing them in a dictionary using the GameObject and Fmod event reference as a key, doing it this way also allowed for several objects to play the same sounds.</p>
+                            <p>I also made saving functionality for the sound settings using a binary formatter. I would save the volume profile for each sound bank for Fmod and save that to a file, as well as saving a version file to make sure the right saving format was used to avoid issues when updating the games settings file format.</p>
                         </div>
-                        <div class="project-level-images">
-                            <img src="assets/images/Level 03.png">
-                            <img src="assets/images/Level 04.png">
-                        </div>
-                        <div class="project-level-images">
-                            <img src="assets/images/Level 05.png">
-                            <img src="assets/images/Level 08.png">
+                        <div class="project-image-r hover-img-r">
+                            <img src="assets/images/Programming/Overworked/SoundManager usecase.png">
                         </div>
                     </div>
-                </div>
-                
-                <div class="project-myWork">
-                    <div class="project-image-l">
-                        <img src="assets/images/player-feedback.png">
+
+                    
+                    <div class="project-myWork">
+                        <div class="project-image-l hover-img-l">
+                            <img src="assets/images/Programming/Overworked/Workstation script.png">
+                        </div>
+                        <div class="project-text-center">
+                            <h3>Workstations and Feedback</h3>
+                            <p>I also made the Workstations for the game. They were made using a Base workstation script that has most of the functionality needed to make the different types of workstations in the game. I then used the workstation base script to make the other workstations in the game. The workstations also contain code for feedback telling the player if items are being repaired/crafted and if the player is close enough to place items on the station. I also modified other scripts that had anything to do with player interaction and added code to show feedback to the players in order to guide them around the level.</p>
+                        </div>
+                        <div class="project-image-r hover-img-r">
+                            <img src="assets/images/Programming/Overworked/Workstation Feedback script.png">
+                        </div>
                     </div>
+
+                    <div class="project-myWork">
+                        <div class="project-text-center">
+                            <h3>General for The Project</h3>
+                            <p>Other than that my work on this project has consisted of bug fixing mine and my teammates code, designing levels and feedback for the game and making sure the team worked on relevant tasks to further our projects progress.</p>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="game-design" style="display: none;">
                     <div class="project-text-center">
-                        <h3>User feedback</h3>
-                        <p>I also designed most of the user feedback such as, feedback to show items being constructed, feedback to show usable workstations, delivery points and sucessful deliveries</p>
+                        <h3>My Responsibilities</h3>
+                        <p>For this project I worked as Team Lead, Game Designer and Programmer. As game designer I made several of the levels in the game, as well as designing obstacles for the levels and implementing assets into the game.</p>
                     </div>
-                    <div class="project-image-r">
-                        <img src="assets/images/player-feedback2.png">
+                    
+                    <div class="project-myWork">
+                        <div class="project-levels">
+                            <div class="project-text-center">
+                                <h3>Some of the levels I designed</h3>
+                            </div>
+                            <div class="project-level-images">
+                                <img src="assets/images/Level 03.png">
+                                <img src="assets/images/Level 04.png">
+                            </div>
+                            <div class="project-level-images">
+                                <img src="assets/images/Level 05.png">
+                                <img src="assets/images/Level 08.png">
+                            </div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="project-myWork">
-                    <div class="project-image-l">
-                        <img src="assets/images/electricwire-hazard.png">
+                    
+                    <div class="project-myWork">
+                        <div class="project-image-l hover-img-l">
+                            <img src="assets/images/player-feedback.png">
+                        </div>
+                        <div class="project-text-center">
+                            <h3>User feedback</h3>
+                            <p>I also designed most of the user feedback such as, feedback to show items being constructed, feedback to show usable workstations, delivery points and sucessful deliveries</p>
+                        </div>
+                        <div class="project-image-r hover-img-r">
+                            <img src="assets/images/player-feedback2.png">
+                        </div>
                     </div>
-                    <div class="project-text-center">
-                        <h3>Broken Electric Wire and Monorail Hazard</h3>
-                        <p>These hazards were designed to add to both the background of the levels as well as serve as a timing obstacle for the player to change up their pace in the levels</p>
+                    
+                    <div class="project-myWork">
+                        <div class="project-image-l hover-img-l">
+                            <img src="assets/images/electricwire-hazard.png">
+                        </div>
+                        <div class="project-text-center">
+                            <h3>Broken Electric Wire and Monorail Hazard</h3>
+                            <p>These hazards were designed to add to both the background of the levels as well as serve as a timing obstacle for the player to change up their pace in the levels</p>
+                        </div>
+                        <div class="project-image-r hover-img-r">
+                            <img src="assets/images/OverworkedRailHazard.png">
+                        </div>
                     </div>
-                    <div class="project-image-r">
-                        <img src="assets/images/OverworkedRailHazard.png">
-                    </div>
-                </div>
+                </section>
             </section>
                 
             <hr>
                 
             <section class="project" id="a-gods-draw">
-                <div class="project-header">
+                <div class="project-header img-link">
                     <a href="https://thekingcharlie.itch.io/a-gods-draw">
                         <img src="assets/images/Godsdraw.png">
                     </a>
@@ -113,37 +176,99 @@
                         A first-person DeckBuilding experience where you must prevent Ragnarok
                     </p>
                 </div>
-            
-                <div class="project-text-center">
-                    <h3>My Responsibilities</h3>
-                    <p>For this project I worked as a Programmer and a Game Designer. I was mainly tasked with programming the enemies AI and Designing their behavior, attack patterns and UI alongside one of my teammates.</p>
-                </div>
-                
-                <div class="project-myWork">
-                    <div class="project-image-l">
-                        <img src="assets/images/Enemy-UI1.png">
-                    </div>
+
+                <section class="programming">
                     <div class="project-text-center">
-                        <h3>Some of the UI we ended up using</h3>
-                        <p>The enemies UI in the game needed to convey to the player how much damage the player was gonna deal to the enemy, what kind of debuffs the cards had applied to the enemy as well as showing what action the enemy intends on doing this round. All of this had to be done without cluttering up the game space too much around the enemies as well as not confusing the players as we didn't want them to read a long text about what the UI means to understand it</p>
+                        <h3>My Responsibilities</h3>
+                        <p>For this project I worked as a Programmer and a Game Designer. As programmer I was mainly tasked with overhauling and expanding on the games enemy AI and making tools for the designer to more efficiently make new enemies. I also programmed several general gameplay mechanics and fixed many smaller things</p>
                     </div>
-                    <div class="project-image-r">
-                        <img src="assets/images/Enemy-UI.png">
+
+                    <div class="project-myWork">
+                        <div class="project-image-l hover-img-l">
+                            <img src="assets/images/Programming/A_Gods_Draw/AI Tools Actions.png">
+                        </div>
+                        <div class="project-text-center">
+                            <h3>Enemy AI</h3>
+                            <p>The enemy AI in the game was originally very simple and only had a few different actions it could take, I expanded on this by making the enemies actions and ai a lot more customizable by giving them more actions they can do, and by allowing for modifications that can be done using conditions to modify their behaviors and what they can and cannot do. This then changes up the enmies available actions depending on conditions like, what other enemies are on the board with them, wether or not the player had already beaten the game before, is the enemy low on health and a lot of other conditions</p>
+                        </div>
+                        <div class="project-image-r hover-img-r">
+                            <img src="assets/images/Programming/A_Gods_Draw/Enemy Attacking.png">
+                        </div>
                     </div>
-                </div>
+
+                    <div class="project-myWork">
+                        <div class="project-image-l hover-img-l">
+                            <img src="assets/images/Programming/A_Gods_Draw/AI Tools 2.png">
+                        </div>
+                        <div class="project-text-center">
+                            <h3>AI Tools</h3>
+                            <p>To make the enemy AI a lot more easily customizable I decided to create a tool for the game designer to use when creating new enemies for the game. This tool allowed the designer to decide what conditions had to pass before an enemy could consider doing an action, then it would choose an action from all the possible actions depending on action priority and weight. All the conditions could also be used to modify other aspects of the enemies decision making, like modifying an actions likelyhood of happening by changing the weight of an action under certain circumstances, or even changing an actions strength value. There are also descriptive tooltips for all aspects of the tool to help the designers understand how it works</p>
+                        </div>
+                        <div class="project-image-r hover-img-r">
+                            <img src="assets/images/Programming/A_Gods_Draw/AI Tools Weight and Strength.png">
+                        </div>
+                    </div>
+                    
+                    <div class="project-myWork">
+                        <div class="project-image-l hover-img-l">
+                            <img src="assets/images/Programming/A_Gods_Draw/Code 1.png">
+                        </div>
+                        <div class="project-text-center">
+                            <h3>Enemy Actions and Conditions</h3>
+                            <p>All the actions in the game were made using the same template class with different methods that were predefined so making new actions for the enemies would be as quick as possible. The only thing that had to be programmed per action was the logic for who the enemy targets and what happens when the enemy performs their action.</p>
+                        </div>
+                        <div class="project-image-r hover-img-r">
+                            <img src="assets/images/Programming/A_Gods_Draw/Code 2.png">
+                        </div>
+                    </div>
+
+                    <div class="project-myWork">
+                        <div class="project-image-l hover-img-l">
+                            <img src="assets/images/Programming/A_Gods_Draw/Code Conditon Checker.png">
+                        </div>
+                        <div class="project-text-center">
+                            <p>The conditions for an enemies action would be checked through a separate class called the condition checker to see if all the actions conditions are met. This class has different ways of checking conditions, it can look through an array of actions then evaluate if the action is possible based its conditions, if the action is possible it is added to a list and eventually this list is returned containing all the current possible actions. Alternatly conditions can be checked with an array of conditions which is useful for other cases, like in our game where the conditions are also used to check if any action strength or weight modifications should be made.</p>
+                        </div>
+                        <div class="project-image-r hover-img-r">
+                            <img src="assets/images/Programming/A_Gods_Draw/Conditions.png">
+                        </div>
+                    </div>
+                </section>
                 
-                <div class="project-myWork">
-                    <div class="project-image-center">
-                        <img src="assets/images/Enemies.png">
-                    </div>
+                <section class="game-design" style="display: none;">
                     <div class="project-text-center">
-                        <h3>Enemies</h3>
-                        <p>The enemies in the game all have different attack preferences and reactions for what happens on the board, some will only attack while other enemies are alive, while some will always try to buff their fellow enemies unless they are alone on the board. We also made the enemies use new and more actions after having killed the final boss to make the game more fun to keep playing and also more challenging.</p>
+                        <h3>My Responsibilities</h3>
+                        <p>For this project I worked as a Programmer and a Game Designer. I was mainly tasked with programming the enemies AI and Designing their behavior, attack patterns and UI alongside one of my teammates.</p>
                     </div>
-                </div>
+                    
+                    <div class="project-myWork">
+                        <div class="project-image-l hover-img-l">
+                            <img src="assets/images/Enemy-UI1.png">
+                        </div>
+                        <div class="project-text-center">
+                            <h3>Some of the UI we ended up using</h3>
+                            <p>The enemies UI in the game needed to convey to the player how much damage the player was gonna deal to the enemy, what kind of debuffs the cards had applied to the enemy as well as showing what action the enemy intends on doing this round. All of this had to be done without cluttering up the game space too much around the enemies as well as not confusing the players as we didn't want them to read a long text about what the UI means to understand it</p>
+                        </div>
+                        <div class="project-image-r hover-img-r">
+                            <img src="assets/images/Enemy-UI.png">
+                        </div>
+                    </div>
+                    
+                    <div class="project-myWork">
+                        <div class="project-image-center hover-img-l">
+                            <img src="assets/images/Enemies.png">
+                        </div>
+                        <div class="project-text-center">
+                            <h3>Enemies</h3>
+                            <p>The enemies in the game all have different attack preferences and reactions for what happens on the board, some will only attack while other enemies are alive, while some will always try to buff their fellow enemies unless they are alone on the board. We also made the enemies use new and more actions after having killed the final boss to make the game more fun to keep playing and also more challenging.</p>
+                        </div>
+                    </div>
+                </section>
             </section>
         </section>
     </div>
     <script src="assets/scripts/navbar.js"></script>
+    <script src="assets/scripts/toggleDisplay.js"></script>
+    <script src="assets/scripts/copyToClip.js"></script>
 </body>
 </html>
