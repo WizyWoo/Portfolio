@@ -3,7 +3,6 @@ document.getElementById('copy-text').addEventListener('click', function() {
 
     navigator.clipboard.writeText(textToCopy)
         .then(() => {
-            // Change the text to "Copied!" on successful copy
             this.innerText = 'Copied!';
         })
         .catch(err => {

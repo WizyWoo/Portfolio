@@ -10,9 +10,12 @@
     <div class="wrapper">
         <nav class="navbar">
             <button id="about-me-nav">About me</button>
-            <button id="overworked-nav">Overworked</button>
             <button id="a-gods-draw-nav">A Gods Draw</button>
+            <button id="overworked-nav">Overworked</button>
         </nav>
+        <div class="WIP">
+            <p>This portfolio is a WIP</p>
+        </div>
         <header id="start">
             <h1>Kevin Hagfors</h1>
             <h2>Gameplay Programmer - Game Designer</h2>
@@ -43,6 +46,7 @@
                     <li>Git</li>
                     <li>Github</li>
                     <li>Github Copilot</li>
+                    <li>Javascript</li>
                 </ul>
             </div>
             <div class="about-me">
@@ -61,7 +65,108 @@
             <div class="section-head">
                 <h3>My <button class="my-work-button" id="toggle-button">Programming</button> Work</h3>
             </div>
-            
+                
+            <section class="project" id="a-gods-draw">
+                <div class="project-header img-link">
+                    <a href="https://thekingcharlie.itch.io/a-gods-draw">
+                        <img src="assets/images/Godsdraw.png">
+                    </a>
+                    <p>
+                        A first-person DeckBuilding experience where you must prevent Ragnarok
+                    </p>
+                </div>
+
+                <section class="programming">
+                    <div class="project-text-center">
+                        <h3>My Responsibilities</h3>
+                        <p>For this project I worked as a Programmer and a Game Designer. As programmer I was mainly tasked with overhauling and expanding on the games enemy AI and making tools for the designer to more efficiently make new enemies. I also programmed several general gameplay mechanics and fixed many smaller things</p>
+                    </div>
+
+                    <div class="project-myWork">
+                        <div class="project-image-l hover-img-l">
+                            <img src="assets/images/Programming/A_Gods_Draw/AI Tools Actions.png">
+                        </div>
+                        <div class="project-text-center">
+                            <h3>Enemy AI</h3>
+                            <p>The enemy AI in the game was originally very simple and only had a few different actions it could take, I expanded on this by making the enemies actions and ai a lot more customizable by giving them more actions they can do, and by allowing for modifications that can be done using conditions to modify their behaviors and what they can and cannot do. This then changes up the enmies available actions depending on conditions like, what other enemies are on the board with them, wether or not the player had already beaten the game before, is the enemy low on health and a lot of other conditions</p>
+                        </div>
+                        <div class="project-image-r hover-img-r">
+                            <img src="assets/images/Programming/A_Gods_Draw/Enemy Attacking.png">
+                        </div>
+                    </div>
+
+                    <div class="project-myWork">
+                        <div class="project-image-l hover-img-l">
+                            <img src="assets/images/Programming/A_Gods_Draw/AI Tools 2.png">
+                        </div>
+                        <div class="project-text-center">
+                            <h3>AI Tools</h3>
+                            <p>To make the enemy AI a lot more easily customizable I decided to create a tool for the game designer to use when creating new enemies for the game. This tool allowed the designer to decide what conditions had to pass before an enemy could consider doing an action, then it would choose an action from all the possible actions depending on action priority and weight. All the conditions could also be used to modify other aspects of the enemies decision making, like modifying an actions likelyhood of happening by changing the weight of an action under certain circumstances, or even changing an actions strength value. There are also descriptive tooltips for all aspects of the tool to help the designers understand how it works</p>
+                        </div>
+                        <div class="project-image-r hover-img-r">
+                            <img src="assets/images/Programming/A_Gods_Draw/AI Tools Weight and Strength.png">
+                        </div>
+                    </div>
+                    
+                    <div class="project-myWork">
+                        <div class="project-image-l hover-img-l">
+                            <img src="assets/images/Programming/A_Gods_Draw/Code 1.png">
+                        </div>
+                        <div class="project-text-center">
+                            <h3>Enemy Actions and Conditions</h3>
+                            <p>All the actions in the game were made using the same template class with different methods that were predefined so making new actions for the enemies would be as quick as possible. The only thing that had to be programmed per action was the logic for who the enemy targets and what happens when the enemy performs their action.</p>
+                        </div>
+                        <div class="project-image-r hover-img-r">
+                            <img src="assets/images/Programming/A_Gods_Draw/Code 2.png">
+                        </div>
+                    </div>
+
+                    <div class="project-myWork">
+                        <div class="project-image-l hover-img-l">
+                            <img src="assets/images/Programming/A_Gods_Draw/Code Conditon Checker.png">
+                        </div>
+                        <div class="project-text-center">
+                            <p>The conditions for an enemies action would be checked through a separate class called the condition checker to see if all the actions conditions are met. This class has different ways of checking conditions, it can look through an array of actions then evaluate if the action is possible based its conditions, if the action is possible it is added to a list and eventually this list is returned containing all the current possible actions. Alternatly conditions can be checked with an array of conditions which is useful for other cases, like in our game where the conditions are also used to check if any action strength or weight modifications should be made.</p>
+                        </div>
+                        <div class="project-image-r hover-img-r">
+                            <img src="assets/images/Programming/A_Gods_Draw/Conditions.png">
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="game-design" style="display: none;">
+                    <div class="project-text-center">
+                        <h3>My Responsibilities</h3>
+                        <p>For this project I worked as a Programmer and a Game Designer. I was mainly tasked with programming the enemies AI and Designing their behavior, attack patterns and UI alongside one of my teammates.</p>
+                    </div>
+                    
+                    <div class="project-myWork">
+                        <div class="project-image-l hover-img-l">
+                            <img src="assets/images/Enemy-UI1.png">
+                        </div>
+                        <div class="project-text-center">
+                            <h3>Some of the UI we ended up using</h3>
+                            <p>The enemies UI in the game needed to convey to the player how much damage the player was gonna deal to the enemy, what kind of debuffs the cards had applied to the enemy as well as showing what action the enemy intends on doing this round. All of this had to be done without cluttering up the game space too much around the enemies as well as not confusing the players as we didn't want them to read a long text about what the UI means to understand it</p>
+                        </div>
+                        <div class="project-image-r hover-img-r">
+                            <img src="assets/images/Enemy-UI.png">
+                        </div>
+                    </div>
+                    
+                    <div class="project-myWork">
+                        <div class="project-image-center hover-img-l">
+                            <img src="assets/images/Enemies.png">
+                        </div>
+                        <div class="project-text-center">
+                            <h3>Enemies</h3>
+                            <p>The enemies in the game all have different attack preferences and reactions for what happens on the board, some will only attack while other enemies are alive, while some will always try to buff their fellow enemies unless they are alone on the board. We also made the enemies use new and more actions after having killed the final boss to make the game more fun to keep playing and also more challenging.</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <hr>
+
             <section class="project" id="overworked">
                 <div class="project-header img-link">
                     <a href="https://wizardkitten.itch.io/overworked">
@@ -160,107 +265,6 @@
                         </div>
                         <div class="project-image-r hover-img-r">
                             <img src="assets/images/OverworkedRailHazard.png">
-                        </div>
-                    </div>
-                </section>
-            </section>
-                
-            <hr>
-                
-            <section class="project" id="a-gods-draw">
-                <div class="project-header img-link">
-                    <a href="https://thekingcharlie.itch.io/a-gods-draw">
-                        <img src="assets/images/Godsdraw.png">
-                    </a>
-                    <p>
-                        A first-person DeckBuilding experience where you must prevent Ragnarok
-                    </p>
-                </div>
-
-                <section class="programming">
-                    <div class="project-text-center">
-                        <h3>My Responsibilities</h3>
-                        <p>For this project I worked as a Programmer and a Game Designer. As programmer I was mainly tasked with overhauling and expanding on the games enemy AI and making tools for the designer to more efficiently make new enemies. I also programmed several general gameplay mechanics and fixed many smaller things</p>
-                    </div>
-
-                    <div class="project-myWork">
-                        <div class="project-image-l hover-img-l">
-                            <img src="assets/images/Programming/A_Gods_Draw/AI Tools Actions.png">
-                        </div>
-                        <div class="project-text-center">
-                            <h3>Enemy AI</h3>
-                            <p>The enemy AI in the game was originally very simple and only had a few different actions it could take, I expanded on this by making the enemies actions and ai a lot more customizable by giving them more actions they can do, and by allowing for modifications that can be done using conditions to modify their behaviors and what they can and cannot do. This then changes up the enmies available actions depending on conditions like, what other enemies are on the board with them, wether or not the player had already beaten the game before, is the enemy low on health and a lot of other conditions</p>
-                        </div>
-                        <div class="project-image-r hover-img-r">
-                            <img src="assets/images/Programming/A_Gods_Draw/Enemy Attacking.png">
-                        </div>
-                    </div>
-
-                    <div class="project-myWork">
-                        <div class="project-image-l hover-img-l">
-                            <img src="assets/images/Programming/A_Gods_Draw/AI Tools 2.png">
-                        </div>
-                        <div class="project-text-center">
-                            <h3>AI Tools</h3>
-                            <p>To make the enemy AI a lot more easily customizable I decided to create a tool for the game designer to use when creating new enemies for the game. This tool allowed the designer to decide what conditions had to pass before an enemy could consider doing an action, then it would choose an action from all the possible actions depending on action priority and weight. All the conditions could also be used to modify other aspects of the enemies decision making, like modifying an actions likelyhood of happening by changing the weight of an action under certain circumstances, or even changing an actions strength value. There are also descriptive tooltips for all aspects of the tool to help the designers understand how it works</p>
-                        </div>
-                        <div class="project-image-r hover-img-r">
-                            <img src="assets/images/Programming/A_Gods_Draw/AI Tools Weight and Strength.png">
-                        </div>
-                    </div>
-                    
-                    <div class="project-myWork">
-                        <div class="project-image-l hover-img-l">
-                            <img src="assets/images/Programming/A_Gods_Draw/Code 1.png">
-                        </div>
-                        <div class="project-text-center">
-                            <h3>Enemy Actions and Conditions</h3>
-                            <p>All the actions in the game were made using the same template class with different methods that were predefined so making new actions for the enemies would be as quick as possible. The only thing that had to be programmed per action was the logic for who the enemy targets and what happens when the enemy performs their action.</p>
-                        </div>
-                        <div class="project-image-r hover-img-r">
-                            <img src="assets/images/Programming/A_Gods_Draw/Code 2.png">
-                        </div>
-                    </div>
-
-                    <div class="project-myWork">
-                        <div class="project-image-l hover-img-l">
-                            <img src="assets/images/Programming/A_Gods_Draw/Code Conditon Checker.png">
-                        </div>
-                        <div class="project-text-center">
-                            <p>The conditions for an enemies action would be checked through a separate class called the condition checker to see if all the actions conditions are met. This class has different ways of checking conditions, it can look through an array of actions then evaluate if the action is possible based its conditions, if the action is possible it is added to a list and eventually this list is returned containing all the current possible actions. Alternatly conditions can be checked with an array of conditions which is useful for other cases, like in our game where the conditions are also used to check if any action strength or weight modifications should be made.</p>
-                        </div>
-                        <div class="project-image-r hover-img-r">
-                            <img src="assets/images/Programming/A_Gods_Draw/Conditions.png">
-                        </div>
-                    </div>
-                </section>
-                
-                <section class="game-design" style="display: none;">
-                    <div class="project-text-center">
-                        <h3>My Responsibilities</h3>
-                        <p>For this project I worked as a Programmer and a Game Designer. I was mainly tasked with programming the enemies AI and Designing their behavior, attack patterns and UI alongside one of my teammates.</p>
-                    </div>
-                    
-                    <div class="project-myWork">
-                        <div class="project-image-l hover-img-l">
-                            <img src="assets/images/Enemy-UI1.png">
-                        </div>
-                        <div class="project-text-center">
-                            <h3>Some of the UI we ended up using</h3>
-                            <p>The enemies UI in the game needed to convey to the player how much damage the player was gonna deal to the enemy, what kind of debuffs the cards had applied to the enemy as well as showing what action the enemy intends on doing this round. All of this had to be done without cluttering up the game space too much around the enemies as well as not confusing the players as we didn't want them to read a long text about what the UI means to understand it</p>
-                        </div>
-                        <div class="project-image-r hover-img-r">
-                            <img src="assets/images/Enemy-UI.png">
-                        </div>
-                    </div>
-                    
-                    <div class="project-myWork">
-                        <div class="project-image-center hover-img-l">
-                            <img src="assets/images/Enemies.png">
-                        </div>
-                        <div class="project-text-center">
-                            <h3>Enemies</h3>
-                            <p>The enemies in the game all have different attack preferences and reactions for what happens on the board, some will only attack while other enemies are alive, while some will always try to buff their fellow enemies unless they are alone on the board. We also made the enemies use new and more actions after having killed the final boss to make the game more fun to keep playing and also more challenging.</p>
                         </div>
                     </div>
                 </section>
